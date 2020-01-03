@@ -102,21 +102,32 @@ class BarangIdResource(Resource):
         keranjang_marshal['Total Harga'] = total_harga
         return {"status":"berhasil ditambah ke keranjang", "detail":keranjang_marshal}, 200, {'Content-type': 'application/json'}
 
+    # Beli barang seolah-olah tanpa masuk keranjang dengan mengubah checkout_status menjadi True
     @jwt_required
     def patch(self, id):
-        # beli via chaining request keranjang, dan checkout
-        # parser = reqparse.RequestParser()
-        # parser.add_argument('jumlah', type=int, location='json', default=1)
-        # parser.add_argument('ukuran', location='json', required=True)
-        # args = parser.parse_args()
-        # data = {
-        #     'jumlah':args['jumlah'],
-        #     'ukuran':args['ukuran']
-        # }
-        # resp_keranjang = requests.put("http://0.0.0.0:5000/baju/{}".format(id),json=data, headers={'Authorization': 'Bearer ' + jwt_token })
-        # resp_keranjang = resp_keranjang.json()
-        # return resp_keranjang, 200
-        pass
+        parser = reqparse.RequestParser()
+        parser.add_argument('jumlah', type=int, location='json', default=1)
+        parser.add_argument('ukuran', location='json', required=True)
+        args = parser.parse_args()
+        claims = get_jwt_claims()
+        # Properti Keranjang didapat dari query barang dan user
+        user_id = claims['id']
+        barang = Barang.query.get(id)
+        barang_id = barang.id
+        nama_barang = barang.nama
+        harga_barang_int = barang.harga_int
+        harga_barang = barang.harga
+        ukuran = args['ukuran']
+        jumlah = args['jumlah']
+        total_harga_int = jumlah * harga_barang_int
+        total_harga = "Rp. {}".format(total_harga_int)
+        keranjang = Keranjang(barang_id, nama_barang, harga_barang_int, harga_barang, user_id, jumlah, ukuran)
+        keranjang.checkout_status = True
+        db.session.add(keranjang)
+        db.session.commit()
+        keranjang_marshal = marshal(keranjang, Keranjang.response_fields)
+        keranjang_marshal['total harga'] = total_harga
+        return {"status":"silahkan lakukan konfirmasi pemesanan", "total harga":total_harga_int, "detail":keranjang_marshal}, 200, {'Content-type': 'application/json'}
 
 api.add_resource(ListBarangResource, '')
 api.add_resource(BarangIdResource, '/<id>')

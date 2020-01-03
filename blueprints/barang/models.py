@@ -11,6 +11,7 @@ class Keranjang(db.Model):
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False)
     jumlah = db.Column(db.Integer, nullable=False)
     ukuran = db.Column(db.String(255), nullable=False)
+    checkout_status = db.Column(db.Boolean, default=False)
 
     response_fields = {
         'id':fields.Integer,

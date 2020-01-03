@@ -79,10 +79,14 @@ from blueprints.auth.resource import bp_auth
 from blueprints.toko.resource import bp_toko
 from blueprints.barang.resource import bp_barang
 from blueprints.keranjang.resource import bp_keranjang
+from blueprints.checkout.resource import bp_checkout
+from blueprints.user.resource import bp_user
 
 app.register_blueprint(bp_auth, url_prefix='/auth')
 app.register_blueprint(bp_toko, url_prefix='/toko')
 app.register_blueprint(bp_barang, url_prefix='/baju')
 app.register_blueprint(bp_keranjang, url_prefix='/keranjang')
+app.register_blueprint(bp_checkout, url_prefix='/checkout')
+app.register_blueprint(bp_user, url_prefix='/user')
 
 db.create_all()

@@ -1,5 +1,5 @@
-[2020-01-01 16:46:38,585] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/baju?", "request": {"p": 1, "rp": 20, "search": "putih", "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 16:50:45,147] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko/jual [POST]
+[2020-01-03 20:16:04,275] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/register?", "request": {"full_name": "Dobleh Jamal", "email": "youdontsayhuman@gmail.com", "username": "Dobleh99", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2020-01-03 20:18:59,173] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /auth/register [POST]
 Traceback (most recent call last):
   File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
@@ -11,23 +11,25 @@ Traceback (most recent call last):
     return self.dispatch_request(*args, **kwargs)
   File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 55, in post
-    barang = Barang(toko_id, "Rp. {}".format(harga), harga, args['deskripsi'], args['jenis_bahan'], args['desain'])
-TypeError: __init__() missing 1 required positional argument: 'gambar'
-[2020-01-01 16:50:45,150] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Bahagia V1", "keuntungan": 15000, "desain": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "jenis_bahan": "Combed 40s", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 16:51:38,691] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Bahagia V1", "keuntungan": 15000, "desain": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "jenis_bahan": "Combed 40s", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 1, "toko_id": 2, "nama": "T-shirt Bahagia V1", "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}}
-[2020-01-01 16:52:24,284] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/login?", "request": {"email": "rizpol@gmail.com", "password": "rahasia123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Nzc4NzIzNDQsIm5iZiI6MTU3Nzg3MjM0NCwianRpIjoiNjcxNTkxNGItMmZmNS00NTJjLTg3YTQtOWZhZmRjY2FiOThkIiwiZXhwIjoxNTc3OTU4NzQ0LCJpZGVudGl0eSI6InJpenBvbCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjozLCJmdWxsX25hbWUiOiJSaXpwb2wiLCJlbWFpbCI6InJpenBvbEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJpenBvbCIsImRlc2lnbmVyX3N0YXR1cyI6dHJ1ZX19.I9LVJftCjzfxP93ai95tgNSKIZGzXX8RtMUiDa1J66Y"}}
-[2020-01-01 16:54:34,976] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-Shirt Slark Shark Dota 2 Limited Edition - Hitam", "keuntungan": 10000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_ad8bb3a9-79c8-4a5c-a28d-e3a2accaf1a8_1650_1650", "jenis_bahan": "Combed 30s", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Hitam"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 2, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Hitam", "harga": "Rp. 113500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_ad8bb3a9-79c8-4a5c-a28d-e3a2accaf1a8_1650_1650", "terjual": 0}}}
-[2020-01-01 16:55:36,579] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-Shirt Slark Shark Dota 2 Limited Edition - Putih", "keuntungan": 12000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_2c4c98ec-fffd-44b7-a9d3-b64b05d13be6_1080_1080", "jenis_bahan": "Combed 30s", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Putih"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 3, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Putih", "harga": "Rp. 115500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_2c4c98ec-fffd-44b7-a9d3-b64b05d13be6_1080_1080", "terjual": 0}}}
-[2020-01-01 16:55:43,048] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {"nama": "dota"}, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 2, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Hitam", "harga": "Rp. 113500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_ad8bb3a9-79c8-4a5c-a28d-e3a2accaf1a8_1650_1650", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 2, "nama": "T-shirt Bahagia V1", "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
-[2020-01-01 16:55:55,412] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 40s", "orderby": "harga", "sort": "desc"}, "response": {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "daftar jualan": [{"id": 1, "toko_id": 2, "nama": "T-shirt Bahagia V1", "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}]}}
-[2020-01-01 16:56:05,372] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju?", "request": {"p": 1, "rp": 20, "search": "putih", "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": [{"id": 3, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Putih", "harga": "Rp. 115500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_2c4c98ec-fffd-44b7-a9d3-b64b05d13be6_1080_1080", "terjual": 0}]}
-[2020-01-01 16:56:19,335] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju?", "request": {"p": 1, "rp": 20, "search": "slark", "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": [{"id": 2, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Hitam", "harga": "Rp. 113500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_ad8bb3a9-79c8-4a5c-a28d-e3a2accaf1a8_1650_1650", "terjual": 0}, {"id": 3, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Putih", "harga": "Rp. 115500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_2c4c98ec-fffd-44b7-a9d3-b64b05d13be6_1080_1080", "terjual": 0}]}
-[2020-01-01 16:56:35,029] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju?", "request": {"p": 1, "rp": 20, "search": "slark", "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "harga"}, "response": [{"id": 2, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Hitam", "harga": "Rp. 113500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_ad8bb3a9-79c8-4a5c-a28d-e3a2accaf1a8_1650_1650", "terjual": 0}, {"id": 3, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Putih", "harga": "Rp. 115500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_2c4c98ec-fffd-44b7-a9d3-b64b05d13be6_1080_1080", "terjual": 0}]}
-[2020-01-01 16:56:53,977] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju?", "request": {"p": 1, "rp": 20, "search": "slark", "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "harga", "sort": "desc"}, "response": [{"id": 3, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Putih", "harga": "Rp. 115500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_2c4c98ec-fffd-44b7-a9d3-b64b05d13be6_1080_1080", "terjual": 0}, {"id": 2, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Hitam", "harga": "Rp. 113500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_ad8bb3a9-79c8-4a5c-a28d-e3a2accaf1a8_1650_1650", "terjual": 0}]}
-[2020-01-01 17:10:59,816] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /baju/1 [GET]
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/auth/resource.py", line 39, in post
+    signature = gmail.get_signature()
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/gmail/gmail.py", line 110, in get_signature
+    service = build('gmail', 'v1', credentials=creds)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/discovery.py", line 226, in build
+    credentials=credentials)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/discovery.py", line 364, in build_from_document
+    credentials = _auth.default_credentials()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_auth.py", line 42, in default_credentials
+    credentials, _ = google.auth.default()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/google/auth/_default.py", line 321, in default
+    raise exceptions.DefaultCredentialsError(_HELP_MESSAGE)
+google.auth.exceptions.DefaultCredentialsError: Could not automatically determine credentials. Please set GOOGLE_APPLICATION_CREDENTIALS or explicitly create credentials and re-run the application. For more information, please see https://cloud.google.com/docs/authentication/getting-started
+[2020-01-03 20:18:59,193] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/register?", "request": {"full_name": "Dobleh Jamal", "email": "youdontsayhuman@gmail.com", "username": "Dobleh99", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2020-01-03 20:20:47,411] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /auth/register [POST]
 Traceback (most recent call last):
   File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
@@ -39,11 +41,25 @@ Traceback (most recent call last):
     return self.dispatch_request(*args, **kwargs)
   File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/barang/resource.py", line 72, in get
-    penjual = toko.penjual
-AttributeError: 'Toko' object has no attribute 'penjual'
-[2020-01-01 17:10:59,821] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/baju/1?", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-01-01 17:11:11,784] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /baju/1 [GET]
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/auth/resource.py", line 39, in post
+    signature = gmail.get_signature()
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/gmail/gmail.py", line 110, in get_signature
+    service = build('gmail', 'v1', credentials=creds)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/discovery.py", line 226, in build
+    credentials=credentials)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/discovery.py", line 364, in build_from_document
+    credentials = _auth.default_credentials()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_auth.py", line 42, in default_credentials
+    credentials, _ = google.auth.default()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/google/auth/_default.py", line 321, in default
+    raise exceptions.DefaultCredentialsError(_HELP_MESSAGE)
+google.auth.exceptions.DefaultCredentialsError: Could not automatically determine credentials. Please set GOOGLE_APPLICATION_CREDENTIALS or explicitly create credentials and re-run the application. For more information, please see https://cloud.google.com/docs/authentication/getting-started
+[2020-01-03 20:20:47,445] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/register?", "request": {"full_name": "Dobleh Jamal", "email": "youdontsayhuman@gmail.com", "username": "Dobleh99", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2020-01-03 20:21:39,811] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /auth/register [POST]
 Traceback (most recent call last):
   File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
@@ -55,16 +71,25 @@ Traceback (most recent call last):
     return self.dispatch_request(*args, **kwargs)
   File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/barang/resource.py", line 72, in get
-    penjual = toko.nama
-AttributeError: 'Toko' object has no attribute 'penjual'
-[2020-01-01 17:11:11,785] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/baju/1?", "request": null, "response": {"message": "Internal Server Error"}}
-[2020-01-01 17:11:16,755] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju/1?", "request": null, "response": {"id": 1, "toko_id": 2, "nama": "T-shirt Bahagia V1", "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0, "penjual": "MicroCapitalism (edited)"}}
-[2020-01-01 17:11:47,252] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 404, "method": "GET", "code": "404 NOT FOUND", "uri": "/baju/4?", "request": null, "response": {"status": "not found"}}
-[2020-01-01 17:11:53,165] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju/2?", "request": null, "response": {"id": 2, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Hitam", "harga": "Rp. 113500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_ad8bb3a9-79c8-4a5c-a28d-e3a2accaf1a8_1650_1650", "terjual": 0, "penjual": "Ganvas"}}
-[2020-01-01 19:21:46,674] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 405, "method": "ADD", "code": "405 METHOD NOT ALLOWED", "uri": "/baju/1?", "request": null, "response": {"message": "The method is not allowed for the requested URL."}}
-[2020-01-01 19:22:55,063] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 405, "method": "ADD", "code": "405 METHOD NOT ALLOWED", "uri": "/baju/1?", "request": {"jumlah": 1, "ukuran": "M"}, "response": {"message": "The method is not allowed for the requested URL."}}
-[2020-01-01 19:25:18,649] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /baju/1 [PUT]
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/auth/resource.py", line 39, in post
+    signature = gmail.get_signature()
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/gmail/gmail.py", line 110, in get_signature
+    service = build('gmail', 'v1', credentials=creds)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/discovery.py", line 226, in build
+    credentials=credentials)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/discovery.py", line 364, in build_from_document
+    credentials = _auth.default_credentials()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_auth.py", line 42, in default_credentials
+    credentials, _ = google.auth.default()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/google/auth/_default.py", line 321, in default
+    raise exceptions.DefaultCredentialsError(_HELP_MESSAGE)
+google.auth.exceptions.DefaultCredentialsError: Could not automatically determine credentials. Please set GOOGLE_APPLICATION_CREDENTIALS or explicitly create credentials and re-run the application. For more information, please see https://cloud.google.com/docs/authentication/getting-started
+[2020-01-03 20:21:39,827] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/register?", "request": {"full_name": "Dobleh Jamal", "email": "youdontsayhuman@gmail.com", "username": "Dobleh99", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2020-01-03 20:22:37,189] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /auth/register [POST]
 Traceback (most recent call last):
   File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
     rv = self.dispatch_request()
@@ -76,237 +101,30 @@ Traceback (most recent call last):
     return self.dispatch_request(*args, **kwargs)
   File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
     resp = meth(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/barang/resource.py", line 82, in put
-    if not jwt_required():
-TypeError: jwt_required() missing 1 required positional argument: 'fn'
-[2020-01-01 19:25:18,654] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "PUT", "code": "500 INTERNAL SERVER ERROR", "uri": "/baju/1?", "request": {"jumlah": 1, "ukuran": "M"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 19:25:44,283] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /baju/1 [PUT]
-Traceback (most recent call last):
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
-    cursor.execute(statement, parameters)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-pymysql.err.IntegrityError: (1048, "Column 'ukuran' cannot be null")
-
-The above exception was the direct cause of the following exception:
-
-Traceback (most recent call last):
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/barang/resource.py", line 98, in put
-    db.session.commit()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
-    return getattr(self.registry(), name)(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
-    self.transaction.commit()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
-    self._prepare_impl()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
-    self.session.flush()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
-    self._flush(objects)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
-    transaction.rollback(_capture_exception=True)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
-    compat.reraise(exc_type, exc_value, exc_tb)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
-    raise value
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
-    flush_context.execute()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
-    rec.execute(self)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
-    uow,
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
-    insert,
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
-    statement, params
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 982, in execute
-    return meth(self, multiparams, params)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
-    return connection._execute_clauseelement(self, multiparams, params)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
-    distilled_params,
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
-    e, statement, parameters, cursor, context
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
-    util.raise_from_cause(sqlalchemy_exception, exc_info)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
-    reraise(type(exception), exception, tb=exc_tb, cause=cause)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
-    raise value.with_traceback(tb)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
-    cursor, statement, parameters, context
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
-    cursor.execute(statement, parameters)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
-    result = self._query(query)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
-    conn.query(q)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
-    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
-    result.read()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
-    first_packet = self.connection._read_packet()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
-    packet.check_error()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
-    err.raise_mysql_exception(self._data)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
-    raise errorclass(errno, errval)
-sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1048, "Column 'ukuran' cannot be null")
-[SQL: INSERT INTO keranjang (barang_id, nama_barang, harga_barang_int, harga_barang, user_id, jumlah, ukuran) VALUES (%(barang_id)s, %(nama_barang)s, %(harga_barang_int)s, %(harga_barang)s, %(user_id)s, %(jumlah)s, %(ukuran)s)]
-[parameters: {'barang_id': 1, 'nama_barang': 'T-shirt Bahagia V1', 'harga_barang_int': 142000, 'harga_barang': 'Rp. 142000', 'user_id': 3, 'jumlah': 1, 'ukuran': None}]
-(Background on this error at: http://sqlalche.me/e/gkpj)
-[2020-01-01 19:25:44,297] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "PUT", "code": "500 INTERNAL SERVER ERROR", "uri": "/baju/1?", "request": {"jumlah": 1, "ukuran": "M"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 19:26:59,607] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PUT", "code": "200 OK", "uri": "/baju/1?", "request": {"jumlah": 1, "ukuran": "M"}, "response": {"status": "berhasil ditambah ke keranjang", "detail": {"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 1, "ukuran": "M"}}}
-[2020-01-01 19:31:54,440] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PUT", "code": "200 OK", "uri": "/baju/1?", "request": {"jumlah": 1, "ukuran": "M"}, "response": {"status": "berhasil ditambah ke keranjang", "detail": {"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 1, "ukuran": "M", "Total Harga": "Rp. 142000"}}}
-[2020-01-01 19:32:05,147] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PUT", "code": "200 OK", "uri": "/baju/1?", "request": {"jumlah": 3, "ukuran": "M"}, "response": {"status": "berhasil ditambah ke keranjang", "detail": {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": "Rp. 426000"}}}
-[2020-01-01 20:12:07,046] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /baju/2 [PUT]
-Traceback (most recent call last):
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 107, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-01-01 20:12:07,072] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "PUT", "code": "500 INTERNAL SERVER ERROR", "uri": "/baju/2?", "request": {"jumlah": 1, "ukuran": "L"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 20:12:07,076] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /baju/2 [PATCH]
-Traceback (most recent call last):
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 462, in wrapper
-    return self.make_response(data, code, headers=headers)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 491, in make_response
-    resp = self.representations[mediatype](data, *args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/representations/json.py", line 21, in output_json
-    dumped = dumps(data, **settings) + "\n"
-  File "/usr/lib/python3.6/json/__init__.py", line 231, in dumps
-    return _default_encoder.encode(obj)
-  File "/usr/lib/python3.6/json/encoder.py", line 199, in encode
-    chunks = self.iterencode(o, _one_shot=True)
-  File "/usr/lib/python3.6/json/encoder.py", line 257, in iterencode
-    return _iterencode(o, 0)
-  File "/usr/lib/python3.6/json/encoder.py", line 180, in default
-    o.__class__.__name__)
-TypeError: Object of type 'Response' is not JSON serializable
-[2020-01-01 20:12:07,087] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "PATCH", "code": "500 INTERNAL SERVER ERROR", "uri": "/baju/2?", "request": {"jumlah": 1, "ukuran": "L"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 20:12:41,796] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /baju/2 [PUT]
-Traceback (most recent call last):
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 107, in wrapper
-    verify_jwt_in_request()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
-    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
-    raise NoAuthorizationError(errors[0])
-flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
-[2020-01-01 20:12:41,799] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "PUT", "code": "500 INTERNAL SERVER ERROR", "uri": "/baju/2?", "request": {"jumlah": 1, "ukuran": "L"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 20:12:41,802] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PATCH", "code": "200 OK", "uri": "/baju/2?", "request": {"jumlah": 1, "ukuran": "L"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 20:21:00,952] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /baju/2 [PATCH]
-Traceback (most recent call last):
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/barang/resource.py", line 116, in patch
-    resp_keranjang = requests.put("http://0.0.0.0:5000/baju/{}".format(id),json=data, headers={'Authorization': 'Bearer ' + jwt_token })
-NameError: name 'jwt_token' is not defined
-[2020-01-01 20:21:00,957] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "PATCH", "code": "500 INTERNAL SERVER ERROR", "uri": "/baju/2?", "request": {"jumlah": 1, "ukuran": "L"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 21:19:59,195] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "desc"}, "response": [{"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": 426000}, {"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 1, "ukuran": "M", "Total Harga": 142000}]}
-[2020-01-01 21:20:14,279] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "asc"}, "response": [{"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 1, "ukuran": "M", "Total Harga": 142000}, {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": 426000}]}
-[2020-01-01 21:25:55,761] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/login?", "request": {"email": "the_popoh@gmail.com", "password": "rahasia123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Nzc4ODg3NTUsIm5iZiI6MTU3Nzg4ODc1NSwianRpIjoiNWEyYTAyYTEtYzZkMy00ZGY1LTg4MWEtYWMzYjM1OTE5M2M4IiwiZXhwIjoxNTc3OTc1MTU1LCJpZGVudGl0eSI6InRoZV9wb3BvaCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo0LCJmdWxsX25hbWUiOiJUaGUgUG9wb2giLCJlbWFpbCI6InRoZV9wb3BvaEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InRoZV9wb3BvaCIsImRlc2lnbmVyX3N0YXR1cyI6dHJ1ZX19.-6fOzYxwxx_Md-NomBJtYbROu_Wz_RMdY_JbAiM_LUo"}}
-[2020-01-01 21:26:11,320] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "asc"}, "response": []}
-[2020-01-01 21:59:35,533] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/login?", "request": {"email": "rizpol@gmail.com", "password": "rahasia123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Nzc4OTA3NzUsIm5iZiI6MTU3Nzg5MDc3NSwianRpIjoiY2Q1N2MwMWUtYTE0MC00ODc3LWE5MmQtMjFmNWViZThkNDhhIiwiZXhwIjoxNTc3OTc3MTc1LCJpZGVudGl0eSI6InJpenBvbCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjozLCJmdWxsX25hbWUiOiJSaXpwb2wiLCJlbWFpbCI6InJpenBvbEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJpenBvbCIsImRlc2lnbmVyX3N0YXR1cyI6dHJ1ZX19.7_CVPI4b6HjjEICSIN2q9fzJW5d0nueJfJvTagcrqWs"}}
-[2020-01-01 21:59:52,396] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "asc"}, "response": [{"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 1, "ukuran": "M", "Total Harga": 142000}, {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": 426000}]}
-[2020-01-01 22:21:29,970] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /keranjang [PATCH]
-Traceback (most recent call last):
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
-    rv = self.dispatch_request()
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
-    return self.view_functions[rule.endpoint](**req.view_args)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
-    resp = resource(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
-    return self.dispatch_request(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
-    resp = meth(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
-    return fn(*args, **kwargs)
-  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/keranjang/resource.py", line 68, in patch
-    db.session.add(ukuran)
-NameError: name 'ukuran' is not defined
-[2020-01-01 22:21:29,975] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "PATCH", "code": "500 INTERNAL SERVER ERROR", "uri": "/keranjang?", "request": {"id": 1, "jumlah": 2, "ukuran": "L"}, "response": {"message": "Internal Server Error"}}
-[2020-01-01 22:22:53,861] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PATCH", "code": "200 OK", "uri": "/keranjang?", "request": {"id": 1, "jumlah": 2, "ukuran": "L"}, "response": {"status": "edit keranjang berhasil", "detail": {"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 2, "ukuran": "L", "Total Harga": 284000}}}
-[2020-01-01 22:23:00,635] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "asc"}, "response": [{"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 1, "ukuran": "M", "Total Harga": 142000}, {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": 426000}]}
-[2020-01-01 22:23:03,421] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "asc"}, "response": [{"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 1, "ukuran": "M", "Total Harga": 142000}, {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": 426000}]}
-[2020-01-01 22:24:02,851] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "asc"}, "response": [{"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 1, "ukuran": "M", "Total Harga": 142000}, {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": 426000}]}
-[2020-01-01 22:24:07,744] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PATCH", "code": "200 OK", "uri": "/keranjang?", "request": {"id": 1, "jumlah": 2, "ukuran": "L"}, "response": {"status": "edit keranjang berhasil", "detail": {"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 2, "ukuran": "L", "Total Harga": 284000}}}
-[2020-01-01 22:26:50,269] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PATCH", "code": "200 OK", "uri": "/keranjang?", "request": {"id": 1, "jumlah": 2, "ukuran": "L"}, "response": {"status": "edit keranjang berhasil", "detail": {"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 2, "ukuran": "L", "Total Harga": 284000}}}
-[2020-01-01 22:26:58,241] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "asc"}, "response": [{"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 1, "ukuran": "M", "Total Harga": 142000}, {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": 426000}]}
-[2020-01-01 22:27:23,999] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PATCH", "code": "200 OK", "uri": "/keranjang?", "request": {"id": 1, "jumlah": 2, "ukuran": "L"}, "response": {"status": "edit keranjang berhasil", "detail": {"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 2, "ukuran": "L", "Total Harga": 284000}}}
-[2020-01-01 22:27:28,801] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "asc"}, "response": [{"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 2, "ukuran": "L", "Total Harga": 284000}, {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": 426000}]}
-[2020-01-01 22:27:39,930] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "desc"}, "response": [{"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 3, "ukuran": "M", "Total Harga": 426000}, {"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 2, "ukuran": "L", "Total Harga": 284000}]}
-[2020-01-01 22:27:58,795] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PATCH", "code": "200 OK", "uri": "/keranjang?", "request": {"id": 2, "jumlah": 2, "ukuran": "L"}, "response": {"status": "edit keranjang berhasil", "detail": {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 2, "ukuran": "L", "Total Harga": 284000}}}
-[2020-01-01 22:28:02,817] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/keranjang?", "request": {"p": 1, "rp": 20, "search": "", "orderby": "harga", "sort": "desc"}, "response": [{"id": 1, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 2, "ukuran": "L", "Total Harga": 284000}, {"id": 2, "barang_id": 1, "nama_barang": "T-shirt Bahagia V1", "harga_barang_int": 142000, "harga_barang": "Rp. 142000", "user_id": 3, "jumlah": 2, "ukuran": "L", "Total Harga": 284000}]}
-[2020-01-01 22:35:52,500] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {"nama": "dota"}, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 2, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Hitam", "harga": "Rp. 113500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_ad8bb3a9-79c8-4a5c-a28d-e3a2accaf1a8_1650_1650", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 2, "nama": "T-shirt Bahagia V1", "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
-[2020-01-01 22:36:02,392] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": null, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 2, "toko_id": 1, "nama": "T-Shirt Slark Shark Dota 2 Limited Edition - Hitam", "harga": "Rp. 113500", "deskripsi": "Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_ad8bb3a9-79c8-4a5c-a28d-e3a2accaf1a8_1650_1650", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 2, "nama": "T-shirt Bahagia V1", "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/auth/resource.py", line 39, in post
+    signature = gmail.get_signature()
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/gmail/gmail.py", line 110, in get_signature
+    service = build('gmail', 'v1', credentials=creds)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/discovery.py", line 226, in build
+    credentials=credentials)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_helpers.py", line 130, in positional_wrapper
+    return wrapped(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/discovery.py", line 364, in build_from_document
+    credentials = _auth.default_credentials()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/googleapiclient/_auth.py", line 42, in default_credentials
+    credentials, _ = google.auth.default()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/google/auth/_default.py", line 321, in default
+    raise exceptions.DefaultCredentialsError(_HELP_MESSAGE)
+google.auth.exceptions.DefaultCredentialsError: Could not automatically determine credentials. Please set GOOGLE_APPLICATION_CREDENTIALS or explicitly create credentials and re-run the application. For more information, please see https://cloud.google.com/docs/authentication/getting-started
+[2020-01-03 20:22:37,221] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/auth/register?", "request": {"full_name": "Dobleh Jamal", "email": "youdontsayhuman@gmail.com", "username": "Dobleh99", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2020-01-03 20:27:16,775] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/register?", "request": {"full_name": "Dobleh Jamal", "email": "youdontsayhuman@gmail.com", "username": "Dobleh99", "password": "rahasia123"}, "response": {"status": "register berhasil", "user": {"id": 8, "full_name": "Dobleh Jamal", "email": "youdontsayhuman@gmail.com", "username": "Dobleh99", "password": "7f95b733f4210c71482904eb422143f8", "designer_status": false}}}
+[2020-01-03 20:36:50,694] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/register?", "request": {"full_name": "Mohammad Daffa", "email": "daffa@alterra.id", "username": "Fadafuq", "password": "rahasia123"}, "response": {"status": "register berhasil", "user": {"id": 9, "full_name": "Mohammad Daffa", "email": "daffa@alterra.id", "username": "Fadafuq", "password": "7f95b733f4210c71482904eb422143f8", "designer_status": false}}}
+[2020-01-03 22:49:49,807] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 404, "method": "GET", "code": "404 NOT FOUND", "uri": "/login?", "request": {"email": "daffa@alterra.com"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-01-03 22:52:17,494] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 401, "method": "GET", "code": "401 UNAUTHORIZED", "uri": "/auth/reset?", "request": {"email": "daffa@alterra.com"}, "response": {"status": "Gagal", "message": "E-mail tidak terdaftar"}}
+[2020-01-03 22:52:29,024] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/auth/reset?", "request": {"email": "daffa@alterra.id"}, "response": {"status": "Password baru sudah terkirim ke email"}}
+[2020-01-03 22:53:38,020] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/login?", "request": {"email": "daffa@alterra.id", "password": "Ku5f0E"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzgwNjY4MTgsIm5iZiI6MTU3ODA2NjgxOCwianRpIjoiNzBmY2ZhYWUtMmY1Yy00ODI0LWIxZGMtNmQ1ZThjMTNlODg0IiwiZXhwIjoxNTc4MTUzMjE4LCJpZGVudGl0eSI6IkZhZGFmdXEiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MiLCJ1c2VyX2NsYWltcyI6eyJpZCI6OSwiZnVsbF9uYW1lIjoiTW9oYW1tYWQgRGFmZmEiLCJlbWFpbCI6ImRhZmZhQGFsdGVycmEuaWQiLCJ1c2VybmFtZSI6IkZhZGFmdXEiLCJkZXNpZ25lcl9zdGF0dXMiOmZhbHNlfX0.wbJ7yxVh8raNGOb6Mwbkd127NYmcemkDXABM8wLOq0A"}}
+[2020-01-03 22:55:22,669] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PATCH", "code": "200 OK", "uri": "/user/edit?", "request": {"old_password": "Ku5f0E", "new_password": "rahasia123"}, "response": {"status": "password berhasil diubah"}}
+[2020-01-03 22:55:31,019] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 401, "method": "POST", "code": "401 UNAUTHORIZED", "uri": "/auth/login?", "request": {"email": "daffa@alterra.id", "password": "Ku5f0E"}, "response": {"status": "UNAUTHORIZED", "message": "Password atau Email salah"}}
+[2020-01-03 22:55:39,438] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/login?", "request": {"email": "daffa@alterra.id", "password": "rahasia123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NzgwNjY5MzksIm5iZiI6MTU3ODA2NjkzOSwianRpIjoiOGQ0YjkyOTYtODkxYS00MjM1LThhNTAtMGIyMmU3OTdjY2E1IiwiZXhwIjoxNTc4MTUzMzM5LCJpZGVudGl0eSI6IkZhZGFmdXEiLCJmcmVzaCI6ZmFsc2UsInR5cGUiOiJhY2Nlc3MiLCJ1c2VyX2NsYWltcyI6eyJpZCI6OSwiZnVsbF9uYW1lIjoiTW9oYW1tYWQgRGFmZmEiLCJlbWFpbCI6ImRhZmZhQGFsdGVycmEuaWQiLCJ1c2VybmFtZSI6IkZhZGFmdXEiLCJkZXNpZ25lcl9zdGF0dXMiOmZhbHNlfX0.CqPBDxhEJOHAnoGgkj9KN66XIsc20Q2AWTy2354lOek"}}

@@ -19,6 +19,7 @@ class Toko(db.Model):
     deskripsi = db.Column(db.String(1000), nullable=False)
     pemilik = db.Column(db.String(255), db.ForeignKey("user.username"), nullable=False) #diambil dari data claims
     popularitas = db.Column(db.Integer, nullable=False, default=0)
+    keuntungan = db.Column(db.Integer, nullable=False, default=0) #diupdate setiap kali ada yang beli
 
     response_fields = {
         'id':fields.Integer,

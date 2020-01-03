@@ -4,9 +4,14 @@ from flask_jwt_extended import create_access_token, get_jwt_claims, get_jwt_iden
 from flask_restful import Api, Resource, marshal, reqparse
 from ..toko.models import Toko, Barang, harga_bahan
 from ..auth.models import User
+from ..barang.models import Keranjang
 from blueprints import db, app
 #password Encription
 from password_strength import PasswordPolicy
+# Gmail Function
+import gmail
+# Gmail message text
+from message import register_html
 
 bp_toko = Blueprint('toko', __name__)
 api = Api(bp_toko)
@@ -28,9 +33,14 @@ class RegisterTokoResource(Resource):
             toko = Toko(user.id, args['nama_toko'], args['deskripsi'], user.username)
             db.session.add(toko)
             db.session.commit()
+            # SEND EMAIL VIA GMAIL API
+            signature = gmail.get_signature()
+            message = register_html.message.format(args['full_name']) + signature
+            subject = "YOUR STORE : {} IS OFFICIALLY OPEN! (TEESIGNR)".format(args['nama_toko'])
+            gmail.send_email("teesignr@gmail.com", user.email, subject, message)
             return {"status":"register berhasil", "toko":marshal(toko, Toko.response_fields)}, 200, {'Content-type': 'application/json'}
         else:
-            return {"status":"register gagal", "message":"kamu sudah punya toko"}
+            return {"status":"register gagal", "message":"kamu sudah punya toko"}, 400
 
 class TokoJualResource(Resource):
     @jwt_required
@@ -57,7 +67,7 @@ class TokoJualResource(Resource):
             db.session.commit()
             return {"status":"menambah jualan berhasil", "barang":marshal(barang, Barang.response_fields)}, 200, {'Content-type': 'application/json'}
         else:
-            return {"status":"menambah jualan gagal", "message":"anda belum mempunyai toko"}
+            return {"status":"menambah jualan gagal", "message":"anda belum mempunyai toko"}, 400
 
 class CekTokoResource(Resource):
     @jwt_required
@@ -73,14 +83,15 @@ class CekTokoResource(Resource):
         parser.add_argument('jenis bahan', location='json', help='bahan tidak terdaftar'
                             , choices=('Combed 20s', 'Combed 24s', 'Combed 30s', 'Combed 40s', 'Bamboo 30s'
                             , 'Modal 30s', 'Supima 30s'))
-        parser.add_argument('orderby', location='json', help='invalid orderby value', choices=('terjual', 'id', 'harga'))
-        parser.add_argument('sort', location='json', help='invalid sort value', choices=('desc', 'asc'))
+        parser.add_argument('orderby', location='json', help='invalid orderby value', choices=('terjual', 'id', 'harga'), default='terjual')
+        parser.add_argument('sort', location='json', help='invalid sort value', choices=('desc', 'asc'), default='desc')
         args = parser.parse_args()
         # Menentukan offset buat limit hasil pencarian
         offset = (args['p'] * args['rp']) - args['rp']
         # Check Toko dan Return hasil
         if user.designer_status == True:
             toko = Toko.query.filter_by(user_id=user_id).first()
+            keuntungan = "Rp. {}".format(toko.keuntungan)
             marshal_toko = marshal(toko, Toko.response_fields)
             list_barang = Barang.query.filter_by(toko_id=toko.id)
             # Check masing masing filter
@@ -111,14 +122,16 @@ class CekTokoResource(Resource):
                         list_barang = list_barang.order_by(Barang.id)
             # Limit Query
             barang_limit = list_barang.limit(args['rp']).offset(offset)
+
             barang_dijual = []
             for barang in barang_limit:
                 marshal_barang = marshal(barang, Barang.response_fields)
                 barang_dijual.append(marshal_barang)
+            marshal_toko['keuntungan'] = keuntungan
             marshal_toko['daftar jualan'] = barang_dijual
             return marshal_toko, 200, {'Content-type': 'application/json'}
         else:
-            return {"status":"not found", "message":"anda belum mempunyai toko"}
+            return {"status":"not found", "message":"anda belum mempunyai toko"}, 400
 
 class ListTokoResource(Resource):
     def get(self):
@@ -127,8 +140,8 @@ class ListTokoResource(Resource):
         parser.add_argument('p', type=int, location='json', default=1)
         parser.add_argument('rp', type=int, location='json', default=20)
         parser.add_argument('search', location='json')
-        parser.add_argument('orderby', location='json', help='invalid orderby value', choices=('popularitas', 'id'))
-        parser.add_argument('sort', location='json', help='invalid sort value', choices=('desc', 'asc'))
+        parser.add_argument('orderby', location='json', help='invalid orderby value', choices=('popularitas', 'id'), default='popularitas')
+        parser.add_argument('sort', location='json', help='invalid sort value', choices=('desc', 'asc'), default='desc')
         args = parser.parse_args()
         # Menentukan offset buat limit hasil pencarian
         offset = (args['p'] * args['rp']) - args['rp']
@@ -238,7 +251,34 @@ class EditTokoResource(Resource):
             db.session.commit()
             return {"status":"edit sukses", "detail toko":marshal(toko, Toko.response_fields)}, 200, {'Content-Type': 'application/json'}
         else:
-            return {"status":"kamu belum punya toko"}
+            return {"status":"kamu belum punya toko"}, 400
+
+    # Hapus barang jualan
+    @jwt_required
+    def delete(self):
+        parser = reqparse.RequestParser()
+        parser.add_argument('barang_id', type=int, location='json', required=True)
+        args = parser.parse_args()
+        claims = get_jwt_claims()
+        user_id = claims['id']
+        toko = Toko.query.filter_by(user_id=user_id).first()
+        barang = Barang.query.get(args['barang_id'])
+        if barang is not None:
+            if barang.toko_id == toko.id:
+                # Menghapus barang yang ada di keranjang sebelum menghapus barang di toko
+                list_keranjang = Keranjang.query.filter_by(barang_id=args['barang_id'])
+                for keranjang in list_keranjang:
+                    db.session.delete(keranjang)
+                    db.session.commit()
+                db.session.delete(barang)
+                db.session.commit()
+                return {"status":"barang berhasil dihapus"}, 200, {'Content-Type': 'application/json'}
+            else:
+                return {"status":"gagal", "message":"barang tidak ditemukan"}, 400
+        else:
+            return {"status":"barang tidak ditemukan"}, 404
+
+
 
 api.add_resource(RegisterTokoResource, '/register')
 api.add_resource(TokoJualResource, '/jual')

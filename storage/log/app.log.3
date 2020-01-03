@@ -1,0 +1,525 @@
+[2019-12-30 17:20:52,908] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 404, "method": "POST", "code": "404 NOT FOUND", "uri": "/register?", "request": {"full_name": "Dobleh Jamal", "email": "dobleh@gmail.com", "username": "dobleh86", "password": "rahasia123"}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2019-12-30 17:21:39,637] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /register [POST]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/auth/resource.py", line 25, in post
+    validation = policy.test(args['password'])
+NameError: name 'args' is not defined
+[2019-12-30 17:21:39,640] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/register?", "request": {"full_name": "Dobleh Jamal", "email": "dobleh@gmail.com", "username": "dobleh86", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2019-12-30 17:22:15,928] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /register [POST]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/auth/resource.py", line 30, in post
+    db.session.add(user)
+NameError: name 'db' is not defined
+[2019-12-30 17:22:15,931] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/register?", "request": {"full_name": "Dobleh Jamal", "email": "dobleh@gmail.com", "username": "dobleh86", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2019-12-30 17:22:49,137] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /register [POST]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/auth/resource.py", line 33, in post
+    app.logger.debug('DEBUG : %s', user)
+NameError: name 'app' is not defined
+[2019-12-30 17:22:49,139] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/register?", "request": {"full_name": "Dobleh Jamal", "email": "dobleh@gmail.com", "username": "dobleh86", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2019-12-30 17:23:21,668] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /register [POST]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+pymysql.err.IntegrityError: (1062, "Duplicate entry 'dobleh@gmail.com' for key 'email'")
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/auth/resource.py", line 32, in post
+    db.session.commit()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/scoping.py", line 162, in do
+    return getattr(self.registry(), name)(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 1036, in commit
+    self.transaction.commit()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 503, in commit
+    self._prepare_impl()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 482, in _prepare_impl
+    self.session.flush()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2479, in flush
+    self._flush(objects)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2617, in _flush
+    transaction.rollback(_capture_exception=True)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 68, in __exit__
+    compat.reraise(exc_type, exc_value, exc_tb)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 153, in reraise
+    raise value
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/session.py", line 2577, in _flush
+    flush_context.execute()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 422, in execute
+    rec.execute(self)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/unitofwork.py", line 589, in execute
+    uow,
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 245, in save_obj
+    insert,
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/persistence.py", line 1137, in _emit_insert_statements
+    statement, params
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 982, in execute
+    return meth(self, multiparams, params)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 287, in _execute_on_connection
+    return connection._execute_clauseelement(self, multiparams, params)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1101, in _execute_clauseelement
+    distilled_params,
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1250, in _execute_context
+    e, statement, parameters, cursor, context
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1476, in _handle_dbapi_exception
+    util.raise_from_cause(sqlalchemy_exception, exc_info)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 398, in raise_from_cause
+    reraise(type(exception), exception, tb=exc_tb, cause=cause)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/util/compat.py", line 152, in reraise
+    raise value.with_traceback(tb)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/base.py", line 1246, in _execute_context
+    cursor, statement, parameters, context
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/engine/default.py", line 581, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/cursors.py", line 170, in execute
+    result = self._query(query)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/cursors.py", line 328, in _query
+    conn.query(q)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 517, in query
+    self._affected_rows = self._read_query_result(unbuffered=unbuffered)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 732, in _read_query_result
+    result.read()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 1075, in read
+    first_packet = self.connection._read_packet()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/connections.py", line 684, in _read_packet
+    packet.check_error()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/protocol.py", line 220, in check_error
+    err.raise_mysql_exception(self._data)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/pymysql/err.py", line 109, in raise_mysql_exception
+    raise errorclass(errno, errval)
+sqlalchemy.exc.IntegrityError: (pymysql.err.IntegrityError) (1062, "Duplicate entry 'dobleh@gmail.com' for key 'email'")
+[SQL: INSERT INTO user (full_name, email, username, password, designer_status) VALUES (%(full_name)s, %(email)s, %(username)s, %(password)s, %(designer_status)s)]
+[parameters: {'full_name': 'Dobleh Jamal', 'email': 'dobleh@gmail.com', 'username': 'dobleh86', 'password': '7f95b733f4210c71482904eb422143f8', 'designer_status': 0}]
+(Background on this error at: http://sqlalche.me/e/gkpj)
+[2019-12-30 17:23:21,681] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/register?", "request": {"full_name": "Dobleh Jamal", "email": "dobleh@gmail.com", "username": "dobleh86", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2019-12-30 17:24:24,336] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/register?", "request": {"full_name": "Dobleh Jamal", "email": "dobleh99@gmail.com", "username": "dobleh99", "password": "rahasia123"}, "response": {"status": "register succeded", "user": {"id": 3, "full_name": "Dobleh Jamal", "email": "dobleh99@gmail.com", "username": "dobleh99", "password": "7f95b733f4210c71482904eb422143f8", "designer_status": false}}}
+[2019-12-30 17:25:08,539] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /login [POST]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/auth/resource.py", line 47, in post
+    qry = Users.query.filter_by(email=args['email']).filter_by(password=hashed_pass)
+NameError: name 'Users' is not defined
+[2019-12-30 17:25:08,540] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "POST", "code": "500 INTERNAL SERVER ERROR", "uri": "/login?", "request": {"email": "dobleh99@gmail.com", "password": "rahasia123"}, "response": {"message": "Internal Server Error"}}
+[2019-12-30 17:25:30,145] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/login?", "request": {"email": "dobleh99@gmail.com", "password": "rahasia123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Nzc3MDE1MzAsIm5iZiI6MTU3NzcwMTUzMCwianRpIjoiNTc0Yjg2MDYtMTJjYS00ZDAwLTk2OGMtODVlNGJkYzU3OTBiIiwiZXhwIjoxNTc3Nzg3OTMwLCJpZGVudGl0eSI6ImRvYmxlaDk5IiwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWQiOjMsImZ1bGxfbmFtZSI6IkRvYmxlaCBKYW1hbCIsImVtYWlsIjoiZG9ibGVoOTlAZ21haWwuY29tIiwidXNlcm5hbWUiOiJkb2JsZWg5OSIsImRlc2lnbmVyX3N0YXR1cyI6ZmFsc2V9fQ.0zKyo4BKaZ2VBYKxbfCIqSCXzK053LQ5FubjNyovZOg"}}
+[2019-12-30 19:12:10,557] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 405, "method": "GET", "code": "405 METHOD NOT ALLOWED", "uri": "/toko/register?", "request": {"nama_toko": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh"}, "response": {"message": "The method is not allowed for the requested URL."}}
+[2019-12-30 19:14:02,228] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/register?", "request": {"nama_toko": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh"}, "response": {"status": "register succeded", "toko": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99"}}}
+[2019-12-31 13:46:38,947] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/register?", "request": {"nama_toko": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh"}, "response": {"status": "register succeded", "toko": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99"}}}
+[2019-12-31 13:50:26,643] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/register?", "request": {"nama_toko": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh"}, "response": {"status": "register gagal", "message": "kamu sudah punya toko"}}
+[2019-12-31 15:08:24,419] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Ursa Bear Dota 2 Limited", "keuntungan": 5000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_197b4508-f3e1-4377-899a-84fbb7ac1f07_1080_1080", "jenis_bahan": "Combed 30s", "deskripsi": "Deskripsi T-shirt Ursa Bear Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Ursa Bear Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_197b4508-f3e1-4377-899a-84fbb7ac1f07_1080_1080"}}}
+[2019-12-31 15:09:32,382] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko/cek [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 107, in wrapper
+    verify_jwt_in_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data, jwt_header = _decode_jwt_from_request(request_type='access')
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 314, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2019-12-31 15:09:32,397] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko/cek?", "request": null, "response": {"message": "Internal Server Error"}}
+[2019-12-31 15:09:39,001] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": null, "response": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99", "daftar jualan": [{"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Ursa Bear Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_197b4508-f3e1-4377-899a-84fbb7ac1f07_1080_1080"}]}}
+[2019-12-31 15:13:38,583] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Ursa Bear Dota 2 Limited", "keuntungan": 5000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_197b4508-f3e1-4377-899a-84fbb7ac1f07_1080_1080", "jenis_bahan": "Combed 30s", "deskripsi": "Deskripsi T-shirt Ursa Bear Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Ursa Bear Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_197b4508-f3e1-4377-899a-84fbb7ac1f07_1080_1080", "terjual": 0}}}
+[2019-12-31 15:13:43,860] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": null, "response": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99", "daftar jualan": [{"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Ursa Bear Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_197b4508-f3e1-4377-899a-84fbb7ac1f07_1080_1080", "terjual": 0}]}}
+[2019-12-31 15:21:13,002] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "POST", "code": "400 BAD REQUEST", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Slark Dota 2 Limited", "keuntungan": 5000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "jenis_bahan": "Combed 30d", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih"}, "response": {"message": {"jenis_bahan": "bahan tidak terdaftar"}}}
+[2019-12-31 15:21:30,173] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Slark Dota 2 Limited", "keuntungan": 5000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "jenis_bahan": "Combed 30s", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 2, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}}}
+[2019-12-31 15:21:40,845] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": null, "response": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99", "daftar jualan": [{"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Ursa Bear Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/26/20491113/20491113_197b4508-f3e1-4377-899a-84fbb7ac1f07_1080_1080", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}]}}
+[2019-12-31 15:50:58,616] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko/cek [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 79, in get
+    offset = (args['p'] * args['rp']) - args['rp']
+NameError: name 'args' is not defined
+[2019-12-31 15:50:58,626] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": {"message": "Internal Server Error"}}
+[2019-12-31 15:51:33,737] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko/cek [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 89, in get
+    qry_barang = list_barang.filter_by(int(harga.split("Rp. ")[1])>args['harga minimal'])
+NameError: name 'harga' is not defined
+[2019-12-31 15:51:33,740] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": {"message": "Internal Server Error"}}
+[2019-12-31 15:54:29,582] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko/cek [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 717, in __getattr__
+    return getattr(self.comparator, key)
+AttributeError: 'Comparator' object has no attribute 'split'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/attributes.py", line 227, in __getattr__
+    return getattr(self.comparator, key)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 949, in __getattr__
+    return self._fallback_getattr(key)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/properties.py", line 312, in _fallback_getattr
+    return getattr(self.__clause_element__(), key)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/sql/elements.py", line 721, in __getattr__
+    % (type(self).__name__, type(self.comparator).__name__, key)
+AttributeError: Neither 'AnnotatedColumn' object nor 'Comparator' object has an attribute 'split'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 89, in get
+    qry_barang = list_barang.filter(int(Barang.harga.split("Rp. ")[1])>args['harga minimal'])
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/sqlalchemy/orm/attributes.py", line 236, in __getattr__
+    key,
+AttributeError: Neither 'InstrumentedAttribute' object nor 'Comparator' object associated with Barang.harga has an attribute 'split'
+[2019-12-31 15:54:29,594] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": {"message": "Internal Server Error"}}
+[2019-12-31 16:02:25,943] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Slark Dota 2 Limited", "keuntungan": 5000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "jenis_bahan": "Combed 30s", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}}}
+[2019-12-31 16:03:35,994] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Ursa Dota 2 Limited", "keuntungan": 10000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "jenis_bahan": "Combed 30s", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 2, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}}
+[2019-12-31 16:03:48,534] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99", "daftar jualan": [{"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}]}}
+[2019-12-31 16:03:59,234] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 110000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99", "daftar jualan": [{"id": 2, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}]}}
+[2019-12-31 16:05:55,202] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99", "daftar jualan": [{"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}]}}
+[2019-12-31 16:06:04,994] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "harga"}, "response": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99", "daftar jualan": [{"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}]}}
+[2019-12-31 16:06:17,877] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko/cek [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 108, in wrapper
+    return fn(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 102, in get
+    qry_barang = qry_barang.order_by(desc(Barang.harga_int))
+NameError: name 'desc' is not defined
+[2019-12-31 16:06:17,884] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "harga", "sort": "desc"}, "response": {"message": "Internal Server Error"}}
+[2019-12-31 16:09:38,955] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "harga", "sort": "desc"}, "response": {"id": 1, "user_id": 3, "nama": "Toko Dobleh", "deskripsi": "Ini toko punya Dobleh", "pemilik": "dobleh99", "daftar jualan": [{"id": 2, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}, {"id": 1, "toko_id": 1, "harga": "Rp. 108500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}]}}
+[2019-12-31 17:14:38,165] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/register?", "request": {"full_name": "Dobleh Jamal", "email": "doblehjamal@gmail.com", "username": "doblehjamal", "password": "rahasia123"}, "response": {"status": "register berhasil", "user": {"id": 1, "full_name": "Dobleh Jamal", "email": "doblehjamal@gmail.com", "username": "doblehjamal", "password": "7f95b733f4210c71482904eb422143f8", "designer_status": false}}}
+[2019-12-31 17:15:05,854] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/register?", "request": {"full_name": "Ahmad Saipudin", "email": "AS@gmail.com", "username": "ASaipudin", "password": "rahasia123"}, "response": {"status": "register berhasil", "user": {"id": 2, "full_name": "Ahmad Saipudin", "email": "AS@gmail.com", "username": "ASaipudin", "password": "7f95b733f4210c71482904eb422143f8", "designer_status": false}}}
+[2019-12-31 17:15:28,750] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/register?", "request": {"full_name": "Rizpol", "email": "rizpol@gmail.com", "username": "rizpol", "password": "rahasia123"}, "response": {"status": "register berhasil", "user": {"id": 3, "full_name": "Rizpol", "email": "rizpol@gmail.com", "username": "rizpol", "password": "7f95b733f4210c71482904eb422143f8", "designer_status": false}}}
+[2019-12-31 17:15:42,732] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/login?", "request": {"email": "rizpol@gmail.com", "password": "rahasia123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Nzc3ODczNDIsIm5iZiI6MTU3Nzc4NzM0MiwianRpIjoiOTZmMjI0MTMtMzFkZi00YzNhLTg4NTYtY2MwNGU4N2QyY2RiIiwiZXhwIjoxNTc3ODczNzQyLCJpZGVudGl0eSI6InJpenBvbCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjozLCJmdWxsX25hbWUiOiJSaXpwb2wiLCJlbWFpbCI6InJpenBvbEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InJpenBvbCIsImRlc2lnbmVyX3N0YXR1cyI6ZmFsc2V9fQ.ywbv8Sitx1Wed9yiVqXy6GM0W1Cxfe6q_ikhIoZg7V0"}}
+[2019-12-31 17:16:28,613] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/register?", "request": {"nama_toko": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol"}, "response": {"status": "register berhasil", "toko": {"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0}}}
+[2019-12-31 17:17:01,464] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Ursa Dota 2 Limited", "keuntungan": 10000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "jenis_bahan": "Combed 30s", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}}
+[2019-12-31 17:17:38,942] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Slark Dota 2 Limited", "keuntungan": 15000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "jenis_bahan": "Combed 30s", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 2, "toko_id": 1, "harga": "Rp. 118500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}}}
+[2019-12-31 17:17:54,461] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "harga", "sort": "desc"}, "response": {"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "daftar jualan": [{"id": 2, "toko_id": 1, "harga": "Rp. 118500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}, {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}]}}
+[2019-12-31 17:18:10,348] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2019-12-31 17:18:10,352] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko?", "request": null, "response": {"message": "Internal Server Error"}}
+[2019-12-31 17:18:46,236] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+TypeError: get() missing 1 required positional argument: 'id'
+[2019-12-31 17:18:46,237] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko?", "request": null, "response": {"message": "Internal Server Error"}}
+[2019-12-31 17:18:50,777] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    return self.finalize_request(rv)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py", line 73, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-12-31 17:18:50,783] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1975} ERROR - Request finalizing failed with an error while handling an error
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1969, in finalize_request
+    response = self.process_response(response)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 2266, in process_response
+    response = handler(response)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py", line 73, in after_request
+    'response': json.loads(response.data.decode('utf-8'))
+  File "/usr/lib/python3.6/json/__init__.py", line 354, in loads
+    return _default_decoder.decode(s)
+  File "/usr/lib/python3.6/json/decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/lib/python3.6/json/decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2019-12-31 17:19:11,542] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 151, in get
+    toko_limit = qry_toko.limit(args['rp']).offset(offset)
+AttributeError: 'list' object has no attribute 'limit'
+[2019-12-31 17:19:11,544] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko?", "request": null, "response": {"message": "Internal Server Error"}}
+[2019-12-31 17:31:34,897] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": null, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}]}
+[2019-12-31 17:32:51,962] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/register?", "request": {"full_name": "The Popoh", "email": "the_popoh@gmail.com", "username": "the_popoh", "password": "rahasia123"}, "response": {"status": "register berhasil", "user": {"id": 4, "full_name": "The Popoh", "email": "the_popoh@gmail.com", "username": "the_popoh", "password": "7f95b733f4210c71482904eb422143f8", "designer_status": false}}}
+[2019-12-31 17:33:21,864] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/login?", "request": {"email": "the_popoh@gmail.com", "password": "rahasia123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Nzc3ODg0MDEsIm5iZiI6MTU3Nzc4ODQwMSwianRpIjoiNDA5YmYyYzMtOTNkZi00ZWJhLTg0NmYtNGIwYzI4MzE4MzBlIiwiZXhwIjoxNTc3ODc0ODAxLCJpZGVudGl0eSI6InRoZV9wb3BvaCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo0LCJmdWxsX25hbWUiOiJUaGUgUG9wb2giLCJlbWFpbCI6InRoZV9wb3BvaEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InRoZV9wb3BvaCIsImRlc2lnbmVyX3N0YXR1cyI6ZmFsc2V9fQ.iCnJNJ_QkUZjY4p7JWAB-AAPJIYs3W6qxDxt6TUPbGg"}}
+[2019-12-31 17:33:36,740] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Slark Dota 2 Limited", "keuntungan": 15000, "desain": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "jenis_bahan": "Combed 30s", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih"}, "response": {"status": "menambah jualan gagal", "message": "anda belum mempunyai toko"}}
+[2019-12-31 17:34:29,172] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/register?", "request": {"nama_toko": "MicroCapitalism", "deskripsi": "T-Shirt Absurd by The Popoh"}, "response": {"status": "register berhasil", "toko": {"id": 2, "user_id": 4, "nama": "MicroCapitalism", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0}}}
+[2019-12-31 17:34:43,017] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/register?", "request": {"nama_toko": "MicroCapitalim", "deskripsi": "T-Shirt Absurd by The Popoh"}, "response": {"status": "register gagal", "message": "kamu sudah punya toko"}}
+[2019-12-31 17:36:55,117] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/toko/jual?", "request": {"nama_barang": "T-shirt Bahagia V1", "keuntungan": 15000, "desain": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "jenis_bahan": "Combed 40s", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih"}, "response": {"status": "menambah jualan berhasil", "barang": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}}
+[2019-12-31 17:37:37,260] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "harga", "sort": "desc"}, "response": {"id": 2, "user_id": 4, "nama": "MicroCapitalism", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "daftar jualan": []}}
+[2019-12-31 17:37:46,409] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 40s", "orderby": "harga", "sort": "desc"}, "response": {"id": 2, "user_id": 4, "nama": "MicroCapitalism", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "daftar jualan": [{"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}]}}
+[2019-12-31 17:38:02,868] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": null, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+[2019-12-31 17:38:36,326] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": null, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+[2019-12-31 17:45:31,637] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko/1?", "request": null, "response": {"message": {"jenis bahan": "bahan tidak terdaftar"}}}
+[2019-12-31 17:46:04,830] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/1?", "request": null, "response": null}
+[2019-12-31 17:46:48,800] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko/1 [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 183, in get
+    if user.designer_status == True:
+NameError: name 'user' is not defined
+[2019-12-31 17:46:48,807] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko/1?", "request": null, "response": {"message": "Internal Server Error"}}
+[2019-12-31 17:47:45,224] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko/1 [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 213, in get
+    barang_limit = qry_barang.limit(args['rp']).offset(offset)
+UnboundLocalError: local variable 'qry_barang' referenced before assignment
+[2019-12-31 17:47:45,227] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko/1?", "request": null, "response": {"message": "Internal Server Error"}}
+[2019-12-31 17:50:32,183] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/1?", "request": null, "response": {"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "daftar jualan": [{"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 118500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}]}}
+[2019-12-31 17:50:39,388] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/2?", "request": null, "response": {"id": 2, "user_id": 4, "nama": "MicroCapitalism", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "daftar jualan": [{"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}]}}
+[2020-01-01 15:06:27,783] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "POST", "code": "200 OK", "uri": "/auth/login?", "request": {"email": "the_popoh@gmail.com", "password": "rahasia123"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1Nzc4NjU5ODcsIm5iZiI6MTU3Nzg2NTk4NywianRpIjoiYjRlYTkzN2EtY2YwZS00ODk4LWFlMGItOGM5NTY4MTdmNzE5IiwiZXhwIjoxNTc3OTUyMzg3LCJpZGVudGl0eSI6InRoZV9wb3BvaCIsImZyZXNoIjpmYWxzZSwidHlwZSI6ImFjY2VzcyIsInVzZXJfY2xhaW1zIjp7ImlkIjo0LCJmdWxsX25hbWUiOiJUaGUgUG9wb2giLCJlbWFpbCI6InRoZV9wb3BvaEBnbWFpbC5jb20iLCJ1c2VybmFtZSI6InRoZV9wb3BvaCIsImRlc2lnbmVyX3N0YXR1cyI6dHJ1ZX19.DvwrQKZHQUvOidb6ON1cGv8G7Bq_aMhZ9Ohh2bqieHQ"}}
+[2020-01-01 15:07:01,411] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/cek?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 40s", "orderby": "harga", "sort": "desc"}, "response": {"id": 2, "user_id": 4, "nama": "MicroCapitalism", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "daftar jualan": [{"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}]}}
+[2020-01-01 15:07:30,981] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/2?", "request": null, "response": {"id": 2, "user_id": 4, "nama": "MicroCapitalism", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "daftar jualan": [{"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}]}}
+[2020-01-01 15:08:29,300] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "PUT", "code": "200 OK", "uri": "/toko/edit?", "request": {"nama_toko": "MicroCapitalism (edited)"}, "response": {"status": "edit sukses", "detail toko": {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0}}}
+[2020-01-01 15:08:56,922] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": null, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+[2020-01-01 15:10:16,481] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 151, in get
+    toko_limit = qry_toko.limit(args['rp']).offset(offset)
+AttributeError: 'list' object has no attribute 'limit'
+[2020-01-01 15:10:16,496] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko?", "request": {"nama": "Rizpol"}, "response": {"message": "Internal Server Error"}}
+[2020-01-01 15:10:59,971] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {"nama": "Rizpol"}, "response": []}
+[2020-01-01 15:11:09,295] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:11:19,138] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:11:39,638] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:11:40,930] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:11:47,732] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/1?", "request": null, "response": {"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "daftar jualan": [{"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 118500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}]}}
+[2020-01-01 15:12:00,022] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:12:13,620] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:12:14,789] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:12:41,184] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:12:44,225] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 404, "method": "GET", "code": "404 NOT FOUND", "uri": "/toko/?", "request": {}, "response": {"message": "The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again."}}
+[2020-01-01 15:12:47,889] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:13:21,846] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /toko [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/toko/resource.py", line 151, in get
+    toko_limit = qry_toko.limit(args['rp']).offset(offset)
+AttributeError: 'list' object has no attribute 'limit'
+[2020-01-01 15:13:21,852] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 500, "method": "GET", "code": "500 INTERNAL SERVER ERROR", "uri": "/toko?", "request": {"nama": "Ganvas"}, "response": {"message": "Internal Server Error"}}
+[2020-01-01 15:13:39,347] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {"nama": "Ganvas"}, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}]}
+[2020-01-01 15:13:47,410] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {"nama": "Ganv"}, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}]}
+[2020-01-01 15:13:54,035] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {"nama": "ganv"}, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}]}
+[2020-01-01 15:15:18,093] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:20:00,529] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:20:21,457] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {}, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+[2020-01-01 15:21:00,597] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:21:04,591] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:21:45,109] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:21:55,798] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:22:46,817] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {}, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+[2020-01-01 15:23:38,294] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:25:24,423] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:73} WARNING - REQUEST_LOG	{"status_code": 400, "method": "GET", "code": "400 BAD REQUEST", "uri": "/toko?", "request": {}, "response": {"message": "The browser (or proxy) sent a request that this server could not understand."}}
+[2020-01-01 15:27:09,968] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko/1?", "request": null, "response": {"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "daftar jualan": [{"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 118500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}]}}
+[2020-01-01 15:27:55,366] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": null, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+[2020-01-01 15:28:22,794] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": null, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+[2020-01-01 15:29:33,810] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {"nama": "Ganvas"}, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}]}
+[2020-01-01 15:30:14,136] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": null, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+[2020-01-01 15:34:55,675] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": null, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}, {"id": 2, "user_id": 4, "nama": "MicroCapitalism (edited)", "deskripsi": "T-Shirt Absurd by The Popoh", "pemilik": "the_popoh", "popularitas": 0, "barang populer": {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}}]}
+[2020-01-01 16:38:22,798] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju?", "request": null, "response": [{"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 118500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}, {"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}]}
+[2020-01-01 16:40:11,545] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju?", "request": {"p": 1, "rp": 20, "harga minimal": 120000, "harga maksimal": 1000000, "jenis bahan": "Combed 40s", "orderby": "terjual"}, "response": [{"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}]}
+[2020-01-01 16:40:20,186] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 40s", "orderby": "terjual"}, "response": [{"id": 3, "toko_id": 2, "harga": "Rp. 142000", "deskripsi": "Material: Cotton Combed 40s. Produk Warna: Putih", "bahan": "Combed 40s", "gambar": "https://cf.shopee.co.id/file/7ae4846e940604239ee7f4d5c6ef2fff", "terjual": 0}]}
+[2020-01-01 16:40:29,859] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju?", "request": {"p": 1, "rp": 20, "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": [{"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 118500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}]}
+[2020-01-01 16:44:49,309] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/toko?", "request": {"nama": "dota"}, "response": [{"id": 1, "user_id": 3, "nama": "Ganvas", "deskripsi": "T-Shirt Dota by Rizpol", "pemilik": "rizpol", "popularitas": 0, "barang populer": {"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}}]}
+[2020-01-01 16:45:55,729] {/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/__init__.py:64} INFO - REQUEST_LOG	{"status_code": 200, "method": "GET", "code": "200 OK", "uri": "/baju?", "request": {"p": 1, "rp": 20, "search": "putih", "harga minimal": 100000, "harga maksimal": 1000000, "jenis bahan": "Combed 30s", "orderby": "terjual"}, "response": [{"id": 1, "toko_id": 1, "harga": "Rp. 113500", "deskripsi": "Deskripsi T-shirt Ursa Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Hitam", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/2/20491113/20491113_764ad0d0-f13a-4223-af94-a48782165a13_1250_1250", "terjual": 0}, {"id": 2, "toko_id": 1, "harga": "Rp. 118500", "deskripsi": "Deskripsi T-shirt Slark Dota 2 Limited Pre-order. Material: Cotton Combed 30s. Produk Warna: Putih", "bahan": "Combed 30s", "gambar": "https://ecs7.tokopedia.net/img/cache/700/product-1/2019/11/3/20491113/20491113_aae8f8c2-0ef5-4079-af15-681c141ea9ce_1650_1650", "terjual": 0}]}
+[2020-01-01 16:46:38,579] {/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py:1891} ERROR - Exception on /baju [GET]
+Traceback (most recent call last):
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask/views.py", line 89, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/portofolio_env/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alta13/Documents/E-Commerce/TEESIGNR/blueprints/barang/resource.py", line 33, in get
+    qry_barang = qry_barang.filter(Barang.nama.like(search) | Barang.deskripsi.like(search))
+AttributeError: type object 'Barang' has no attribute 'nama'
