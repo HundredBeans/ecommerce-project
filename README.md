@@ -1,4 +1,6 @@
 # ecommerce-project (TEESIGNR)
+## INTRODUCTION
+> Teesigner is an E-Commerce that provide a place for anyone who want to sell their design in the form of T-Shirt. Teesigner will cover all the T-Shirt production and Its shipping thingy to the customers. So, sellers won't be experiencing any damnifaction
 
 ## FEATURES
 * Forgot Password (This will send an E-mail which contains new randomed password for user)
