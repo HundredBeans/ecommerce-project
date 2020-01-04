@@ -15,8 +15,6 @@ class User(db.Model):
         'full_name':fields.String,
         'email':fields.String, 
         'username':fields.String,
-        'password':fields.String,
-        'designer_status':fields.Boolean
     }
 
     jwt_claims_fields = {

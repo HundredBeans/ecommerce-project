@@ -35,9 +35,9 @@ class RegisterTokoResource(Resource):
             db.session.commit()
             # SEND EMAIL VIA GMAIL API
             signature = gmail.get_signature()
-            message = register_html.message.format(args['full_name']) + signature
+            message = register_html.message.format(user.full_name) + signature
             subject = "YOUR STORE : {} IS OFFICIALLY OPEN! (TEESIGNR)".format(args['nama_toko'])
-            gmail.send_email("teesignr@gmail.com", user.email, subject, message)
+            gmail.send_email("TEESIGNR", user.email, subject, message)
             return {"status":"register berhasil", "toko":marshal(toko, Toko.response_fields)}, 200, {'Content-type': 'application/json'}
         else:
             return {"status":"register gagal", "message":"kamu sudah punya toko"}, 400

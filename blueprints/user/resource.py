@@ -5,6 +5,7 @@ from flask_restful import Api, Resource, marshal, reqparse
 from ..toko.models import Toko, Barang, harga_bahan
 from ..auth.models import User
 from ..barang.models import Keranjang
+from ..checkout.models import RiwayatPemesanan
 from blueprints import db, app
 #password Encription
 from password_strength import PasswordPolicy
@@ -15,7 +16,20 @@ api = Api(bp_user)
 class UserInfoResource(Resource):
     @jwt_required
     def get(self):
-        pass
+        claims = get_jwt_claims()
+        user_id = claims['id']
+        user = User.query.get(user_id)
+        toko = Toko.query.filter_by(user_id = user_id).first()
+        riwayat_pemesanan = RiwayatPemesanan.query.filter_by(user_id = user_id)
+        marshal_user = marshal(user, User.response_fields)
+        marshal_toko = marshal(toko, Toko.response_fields)
+        keuntungan = "Rp. {}".format(toko.keuntungan)
+        marshal_toko['keuntungan'] = keuntungan
+        list_transaksi = []
+        for transaksi in riwayat_pemesanan:
+            marshal_transaksi = marshal(transaksi, RiwayatPemesanan.response_fields)
+            list_transaksi.append(marshal_transaksi)
+        return {"info user":marshal_user, "info toko":marshal_toko, "riwayat transaksi":list_transaksi}, 200, {'Content-Type': 'application/json'}
 
 class UserEditResource(Resource):
     @jwt_required

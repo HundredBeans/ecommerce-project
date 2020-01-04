@@ -18,18 +18,6 @@ app.config['JWT_ACCESS_TOKEN_EXPIRES'] = timedelta(days=1)
 
 jwt = JWTManager(app)
 
-### DECORATOR superuser REQUIRED ###
-def superuser_required(fn):
-    @wraps(fn)
-    def wrapper(*args, **kwargs):
-        verify_jwt_in_request()
-        claims = get_jwt_claims()
-        if not claims['superuser']:
-            return {'status': 'FORBIDDEN'}, 403, {'Content-Type': 'application/json'}
-        else:
-            return fn(*args, **kwargs)
-    return wrapper
-
 ### SQL ALCHEMY CONFIG ###
 try:
     env = os.environ.get('FLASK_ENV', 'development')
