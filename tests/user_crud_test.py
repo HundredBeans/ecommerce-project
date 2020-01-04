@@ -36,8 +36,7 @@ class TestUserCrud():
         res_json = json.loads(res.data)
         assert res.status_code == 400
 
-    # Nanti diganti
     def test_get_info_user(self, client):
-        token = create_token(True)
+        token = create_token(False)
         res = client.get('user', headers={'Authorization' : 'Bearer ' + token})
         assert res.status_code == 200

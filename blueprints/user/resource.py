@@ -22,14 +22,17 @@ class UserInfoResource(Resource):
         toko = Toko.query.filter_by(user_id = user_id).first()
         riwayat_pemesanan = RiwayatPemesanan.query.filter_by(user_id = user_id)
         marshal_user = marshal(user, User.response_fields)
-        marshal_toko = marshal(toko, Toko.response_fields)
-        keuntungan = "Rp. {}".format(toko.keuntungan)
-        marshal_toko['keuntungan'] = keuntungan
         list_transaksi = []
         for transaksi in riwayat_pemesanan:
             marshal_transaksi = marshal(transaksi, RiwayatPemesanan.response_fields)
             list_transaksi.append(marshal_transaksi)
-        return {"info user":marshal_user, "info toko":marshal_toko, "riwayat transaksi":list_transaksi}, 200, {'Content-Type': 'application/json'}
+        if toko is not None:
+            marshal_toko = marshal(toko, Toko.response_fields)
+            keuntungan = "Rp. {}".format(toko.keuntungan)
+            marshal_toko['keuntungan'] = keuntungan
+            return {"info user":marshal_user, "info toko":marshal_toko, "riwayat transaksi":list_transaksi}, 200, {'Content-Type': 'application/json'}
+        else:
+            return {"info user":marshal_user, "riwayat transaksi":list_transaksi}, 200, {'Content-Type': 'application/json'}
 
 class UserEditResource(Resource):
     @jwt_required

@@ -104,3 +104,14 @@ class TestGmailMock():
         res = client.post('toko/register', json=data, headers={'Authorization' : 'Bearer ' + token})
         res_json = json.loads(res.data)
         assert res.status_code == 200
+
+    # Get info user
+    def test_get_info_user(self, client):
+        token = create_token(True)
+        res = client.get('user', headers={'Authorization' : 'Bearer ' + token})
+        assert res.status_code == 200
+
+    def test_get_info_user_buyer(self, client):
+        token = create_token(False)
+        res = client.get('user', headers={'Authorization' : 'Bearer ' + token})
+        assert res.status_code == 200
