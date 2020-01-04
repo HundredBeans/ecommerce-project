@@ -31,10 +31,15 @@
    - **GET** /baju/<id> (show item with specific id)
    - **PUT** /baju/<id> (add item with specific id to cart (logged-in))
    - **PATCH** /baju/<id> (buy item with specific id without putting it into cart (logged-in))
-4. Checkout Blueprints
+4. Keranjang Blueprints
+   - **GET** /keranjang (show all items in cart)
+   - **PUT** /keranjang (edit item in cart)
+   - **DELETE** /keranjang (remove item/s from cart)
+   - **PATCH** /keranjang (checkout item/s into transaction)
+5. Checkout Blueprints
    - **DELETE** /checkout (Cancel order and withdraw it into cart (logged-in))
    - **POST** /checkout (confirm those order by fill out shipping details and get the detail transaction sent via E-mail (logged-in))
    - **GET** /checkout (show all order item that has been checked-out (logged-in))
-5. User Blueprints
+6. User Blueprints
    - **PATCH** /user/edit (Change password for user (logged-in))
    - **GET** /user (show user info such as store and history of transactions)
