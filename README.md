@@ -4,7 +4,7 @@
 
 ## FEATURES
 * Forgot Password (This will send an E-mail which contains new randomed password for user)
-* Email Notification from Teesignr@gmail.com (Gmail API) with appealing template (HTML)
+* Email Notification from Teesignr@gmail.com (Gmail API)
 * Cart
 * Buy without Cart
 * Search T-Shirt and Store
