@@ -1,6 +1,7 @@
 import json, os
 from datetime import datetime, timedelta
 from flask import Flask, request
+from flask_cors import CORS
 from flask_jwt_extended import JWTManager, get_jwt_claims, verify_jwt_in_request
 from flask_migrate import Migrate, MigrateCommand
 from flask_restful import Resource, reqparse
@@ -9,6 +10,7 @@ from flask_sqlalchemy import SQLAlchemy
 from functools import wraps
 
 app = Flask(__name__)
+CORS(app)
 
 app.config['APP_DEBUG'] = True
 

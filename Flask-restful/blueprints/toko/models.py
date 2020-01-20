@@ -46,7 +46,7 @@ class Barang(db.Model):
     harga_int = db.Column(db.Integer, nullable=False)
     deskripsi = db.Column(db.String(1000), nullable=False)
     bahan = db.Column(db.String(255), nullable=False)
-    gambar = db.Column(db.String(255), nullable=False)
+    gambar = db.Column(db.String(1000), nullable=False)
     terjual = db.Column(db.Integer, nullable=False, default=0)
 
     response_fields = {

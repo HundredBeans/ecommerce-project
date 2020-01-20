@@ -7,11 +7,12 @@ from ..auth.models import User
 from ..barang.models import Keranjang
 from ..checkout.models import RiwayatPemesanan
 from blueprints import db, app
-#password Encription
+# password Encription
 from password_strength import PasswordPolicy
 
 bp_user = Blueprint('user', __name__)
 api = Api(bp_user)
+
 
 class UserInfoResource(Resource):
     @jwt_required
@@ -19,26 +20,31 @@ class UserInfoResource(Resource):
         claims = get_jwt_claims()
         user_id = claims['id']
         user = User.query.get(user_id)
-        toko = Toko.query.filter_by(user_id = user_id).first()
-        riwayat_pemesanan = RiwayatPemesanan.query.filter_by(user_id = user_id)
+        toko = Toko.query.filter_by(user_id=user_id).first()
+        riwayat_pemesanan = RiwayatPemesanan.query.filter_by(user_id=user_id)
         marshal_user = marshal(user, User.response_fields)
         list_transaksi = []
         for transaksi in riwayat_pemesanan:
-            marshal_transaksi = marshal(transaksi, RiwayatPemesanan.response_fields)
+            marshal_transaksi = marshal(
+                transaksi, RiwayatPemesanan.response_fields)
             list_transaksi.append(marshal_transaksi)
         if toko is not None:
             marshal_toko = marshal(toko, Toko.response_fields)
             keuntungan = "Rp. {}".format(toko.keuntungan)
             marshal_toko['keuntungan'] = keuntungan
-            return {"info user":marshal_user, "info toko":marshal_toko, "riwayat transaksi":list_transaksi}, 200, {'Content-Type': 'application/json'}
+            return {"info_user": marshal_user, "info_toko": marshal_toko, "riwayat_transaksi": list_transaksi}, 200, {'Content-Type': 'application/json'}
         else:
-            return {"info user":marshal_user, "riwayat transaksi":list_transaksi}, 200, {'Content-Type': 'application/json'}
+            return {"info_user": marshal_user, "riwayat_transaksi": list_transaksi}, 200, {'Content-Type': 'application/json'}
+
+    def options(self):
+        return {}, 200
+
 
 class UserEditResource(Resource):
     @jwt_required
-    def patch(self):
+    def put(self):
         policy = PasswordPolicy.from_names(
-            length = 6
+            length=6
         )
         parser = reqparse.RequestParser()
         parser.add_argument('old_password', location='json', required=True)
@@ -47,19 +53,24 @@ class UserEditResource(Resource):
         claims = get_jwt_claims()
         user_id = claims['id']
         user = User.query.get(user_id)
-        hashed_pass_old = hashlib.md5(args['old_password'].encode()).hexdigest()
+        hashed_pass_old = hashlib.md5(
+            args['old_password'].encode()).hexdigest()
         validation = policy.test(args['new_password'])
         if hashed_pass_old == user.password:
             if validation == []:
-                hashed_pass_new = hashlib.md5(args['new_password'].encode()).hexdigest()
+                hashed_pass_new = hashlib.md5(
+                    args['new_password'].encode()).hexdigest()
                 user.password = hashed_pass_new
                 db.session.add(user)
                 db.session.commit()
-                return {"status":"password berhasil diubah"}, 200, {'Content-Type': 'application/json'}
+                return {"status": "password berhasil diubah"}, 200, {'Content-Type': 'application/json'}
             else:
-                return {"status":"gagal", "message":"password tidak valid"}, 400, {"Content-type":"application/json"}
+                return {"status": "gagal", "message": "password tidak valid"}, 400, {"Content-type": "application/json"}
         else:
-            return {"status":"gagal", "message":"password salah"}, 401
+            return {"status": "gagal", "message": "password salah"}, 401
+
+    def options(self):
+        return {}, 200
 
 
 api.add_resource(UserInfoResource, '')
