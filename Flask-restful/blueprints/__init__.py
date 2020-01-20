@@ -24,9 +24,9 @@ jwt = JWTManager(app)
 try:
     env = os.environ.get('FLASK_ENV', 'development')
     if env == 'testing':
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost:3306/project_ecommerce_test'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:kacang100@localhost:3306/project_ecommerce_test'
     else:
-        app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root@localhost:3306/project_ecommerce'
+        app.config['SQLALCHEMY_DATABASE_URI'] = 'mysql+pymysql://root:kacang100@localhost:3306/project_ecommerce'
 except Exception as e:
     raise e
 
