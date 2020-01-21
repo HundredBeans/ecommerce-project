@@ -1,0 +1,16 @@
+demoji
+flask
+flask-jwt-extended
+flask-migrate
+flask-restful
+flask-script
+flask-sqlalchemy
+password_strength
+pymysql
+pytest
+pytest-cov
+flask-cors
+google-api-python-client
+google-auth-httplib2
+google-auth-oauthlib
+

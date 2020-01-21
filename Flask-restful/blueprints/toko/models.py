@@ -15,9 +15,9 @@ class Toko(db.Model):
     __tablename__ = "toko"
     id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     user_id = db.Column(db.Integer, db.ForeignKey("user.id"), nullable=False) #diambil dari data claims
-    nama = db.Column(db.String(255), unique=True, nullable=False)
+    nama = db.Column(db.String(191), unique=True, nullable=False)
     deskripsi = db.Column(db.String(1000), nullable=False)
-    pemilik = db.Column(db.String(255), db.ForeignKey("user.username"), nullable=False) #diambil dari data claims
+    pemilik = db.Column(db.String(191), db.ForeignKey("user.username"), nullable=False) #diambil dari data claims
     popularitas = db.Column(db.Integer, nullable=False, default=0)
     keuntungan = db.Column(db.Integer, nullable=False, default=0) #diupdate setiap kali ada yang beli
 
